@@ -1,0 +1,2181 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+            <title>Webhooks
+            | سلة</title>
+        <meta name="_token" content="E74EAYSBmfp2E00d4yWlqucH6Dgc9Qtx5sImVq07">
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Global stylesheets -->
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="https://cdn.salla.network/images/logo/logo-square.png"/>
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="https://cdn.salla.network/images/logo/logo-light-square.png"/>
+    <style>
+    :root {
+        --flag-image-url-x2: url("https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/intl-tel-input/img/flags@2x.55c83c669c053a4b1156a965a2beea42.png");
+        --flag-image-url: url("https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/intl-tel-input/img/flags.05004a2d55372b6a39b657def195e25a.png");
+    }
+</style>
+<!-- <link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css"> -->
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/bootstrap-rtl-grid.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/core.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/components.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/plugins/quill/quill.snow.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/plugins/notifications/sweetalert2.min.css?v=1.0.2" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/jquery-confirm/jquery-confirm.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/uploader/css/fileinput.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/uploader/css/fileinput-rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/bootstrap-iconpicker/css/bootstrap-iconpicker.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/intl-tel-input/css/intlTelInput.0ab7e184da0622a63de2912de1026f52.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/animate.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdn.salla.network/fonts/pingarlt.css?v=0.2">
+<link rel="stylesheet" href="https://cdn.salla.network/fonts/sallaicons.css?v=1.4">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/custom.css?v=" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/re-custom.f8a5518eb70b86fe33737a2b22991fbc.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/themes/dark.3d4989158d13704d2191ec21b16750c1.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.assets.salla.network/prod/admin/css/uploader.5c9552477fc87a8897eec97c7e8f8d25.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/semantic.ad49307e5fad9c40c4022574dd0a214a.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.salla.network/fonts/hugeicons-font.min.css" rel="stylesheet">
+
+
+    <link href="https://cdn.assets.salla.network/prod/admin/cp/assets/css/plugins/doka/doka.min.css" rel="stylesheet" type="text/css">
+
+        <script type="28b087ebe96376e18ef78686-text/javascript">
+        //This is a workaround, until we drop plantrack
+        document.cookie = "_plantrack=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=salla.sa; secure; sameSite=strict";
+        window.paceOptions = {
+            ajax: false,
+            restartOnRequestAfter: false,
+            document: false, // disabled
+            eventLag: false, // disabled
+            startOnPageLoad:false
+        };
+        window.langSwitcher = {
+            default: 'ar',
+            current: 'ar',
+            dir    : 'rtl',
+        };
+        window.gtm_id = "GTM-N27W52C";
+        window.google_maps_api_key_view = "AIzaSyBFgFISAizDP3YVWj0y5rF8JKKNQ2vohdc";
+        window.mixpanel_token = "34f84a65303b3e8f5c2868ac03c4ffbf";
+
+      const updateHeight = () => {
+        requestAnimationFrame(() => {
+                  });
+      };
+
+      const hideParentOverlay = () => {
+        window.parent?.postMessage({ event: "overlay.close" }, "*");
+      }
+
+      const notifyParent = (url = null) => {
+        window.parent.postMessage(
+          { event: "urlChange", url: url || window.location.href },
+          "*"
+        )
+        updateHeight();
+      }
+
+      const closeFiltersPanel = () => {
+        let filtersPanel = $('.rec-filter-wrapper');
+        if (filtersPanel.hasClass('reveal')) {
+            filtersPanel.addClass('conceal');
+        }
+      };
+
+      // Event listener for window resize
+      window.addEventListener("resize", updateHeight)
+      window.addEventListener("load", updateHeight)
+
+      // in case overlay is opened in parent and the iframe url changed - (ex: after submitting filters)
+      window.addEventListener("load", hideParentOverlay)
+
+      // Observe changes to the content and adjust height
+      document.addEventListener('DOMContentLoaded', () => {
+          new MutationObserver(updateHeight).observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            characterData: true,
+          });
+
+          navigation.addEventListener("navigate", e => {
+              notifyParent(e.destination.url);
+              closeFiltersPanel();
+          });
+
+          // add legacy key to dataset layer
+          if (typeof window !== "undefined" && !window?.sallaLegacy) {
+            if (typeof datatest === "object" && datatest !== null) {
+              datatest.legacy = 1;
+            }
+          }
+      });
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/navigation-polyfill@0.0.2/lib/index.min.js"></script> -->
+
+            <script src="https://status.salla.com/ar/b8319461/widget/script.js" type="28b087ebe96376e18ef78686-text/javascript">
+        </script>
+        
+    <script type="28b087ebe96376e18ef78686-text/javascript">
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({"page":{"fingerprint":"a936a031e9a6bf071d085779b6165351dec1d21e","pageName":"cpSettingsShowComponent","mobileApp":0,"referrer":"https:\/\/s.salla.sa\/settings\/component\/webhooks","theme":"default"},"store":{"id":1698809,"website":"https:\/\/ur-script.com","logo":"https:\/\/cdn.salla.sa\/OqYavo\/JTeUHqdQk8Uw4nXke7dFEf7MbzbetusgI1feUcgX.jpg","about":"<p>UR سكربت: مبرمج ومُبتكر لقطع ماتركس وبائع لها. نسعى لتقديم أفضل الحلول البرمجية لعشاق الألعاب.<\/p>","created_at":1716201543,"created_at_in_days":562,"plan":"team","name":"Urscript","created":"2024-05-20T01:39:03","entity":"person","sender_sms_name":null,"sms_credit":0,"currency":"SAR","store_status":"active","plan_name":"team","gender":null,"social_twitter":"","social_facebook":"","social_maroof":null,"social_youtube":"","social_whatsapp":"+966598513798","has_domain":true,"has_team":0,"theme_name":"73130640","epayment":true,"has_app":false},"customer":{"id":5740827,"isGuest":false,"email":"mohammedeasa51@gmail.com"}});
+</script>
+<script type="28b087ebe96376e18ef78686-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N27W52C');</script>
+        <script type="28b087ebe96376e18ef78686-text/javascript">
+  var token = null
+  var switcheries = []
+  try {
+    token = localStorage.token
+    token = token ? JSON.parse(token) : token
+  } catch (e) {
+    token = null
+    console.log(e)
+  }
+
+  if (window.token?.key && localStorage.getItem('user')) {
+    window.token.key = JSON.parse(localStorage.getItem('user'))?.token
+  }
+
+  try {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      window.location.href = '/auth/logout';
+    }
+  } catch (error) {
+    window.location.href = '/auth/logout';
+  }
+
+  function isUserTokenValid() {
+    const expireAt = JSON.parse(localStorage.getItem('user'))?.expire_at
+    let now = new Date()
+
+    return expireAt && now <= new Date(expireAt)
+  }
+
+  function setUserToken(data, setUser = true) {
+    if (setUser) {
+      window.localStorage.setItem('user', JSON.stringify({
+        token: data.token,
+        refresh_token: data.refresh_token,
+        expire_at: data.expire_at
+      }))
+    }
+    token = { user_id: 1743594430, id: 92451676, key: data.token }
+    window.token = token
+    window.localStorage.setItem('token', JSON.stringify(token))
+  }
+
+  function getFreshToken(autoReloading) {
+    if (isUserTokenValid()) {
+      setUserToken(JSON.parse(localStorage.getItem('user')), false)
+      return token.key
+    } else {
+      const headers = new Headers()
+      headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('user'))?.refresh_token)
+      return fetch('https://api.salla.dev/admin/v2/auth/refresh', { method: 'POST', headers: headers })
+        .then(response => response.json())
+        .then(response => {
+          if (!(token = response.data ? response.data.token : null)) {
+            throw new Error('Can\'t get token!')
+          }
+          setUserToken(response.data)
+          autoReloading && window.location.reload()
+          return response.data.token
+        })
+    }
+  }
+
+  async function getAsyncFreshToken(autoReloading) {
+    try {
+      if (isUserTokenValid()) {
+        setUserToken(JSON.parse(localStorage.getItem('user')), false)
+        return new Promise((resolve, reject) => {
+          resolve(JSON.parse(localStorage.getItem('user'))?.token)
+        })
+      } else {
+        const headers = new Headers()
+        headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('user'))?.refresh_token)
+        const response = await fetch('https://api.salla.dev/admin/v2/auth/refresh', { method: 'POST', headers: headers })
+        let { data } = await response.json()
+        if (!(data.token)) {
+          throw new Error('Can\'t get token!')
+        }
+        setUserToken(data)
+        if (autoReloading) {
+          window.location.reload()
+        }
+        return new Promise((resolve, reject) => {
+          resolve(data.token)
+        })
+      }
+    } catch (error) {
+      // Handle errors here
+      //console.error(error);
+      throw error
+    }
+  }
+
+  
+      if (!token || typeof token !== 'object' || !token.key || token.id !== 92451676 || token.user_id !== 1743594430) {
+      getFreshToken(true)
+    }
+  
+      var _token = "E74EAYSBmfp2E00d4yWlqucH6Dgc9Qtx5sImVq07";
+      var baseUrl = "https://s.salla.sa";
+      var baseStoresUrl = "https://salla.sa";
+      var store = {"url":"https://ur-script.com","username":"urscript","id":92451676};
+      var apiUrl = "https://api.salla.dev/admin/v2";
+      var portalAccountUrl = "https://api.salla.dev";
+      var expertUrl = "https://api.salla.dev/experts/v1/";
+      var expertToken = "v4.public.eyJpZCI6MTc0MzU5NDQzMCwibmFtZSI6bnVsbCwic3RvcmVfaWQiOjkyNDUxNjc2LCJpc3MiOiJzYWxsYSIsImF1ZCI6InNhbGxhIiwiaWF0IjoiMjAyNS0xMi0wM1QyMDowMjowMSswMzowMCIsIm5iZiI6IjIwMjUtMTItMDNUMjA6MDI6MDErMDM6MDAiLCJleHAiOiIyMDI1LTEyLTE3VDIwOjAyOjAxKzAzOjAwIn01TXdPuUCNn0R47w3w-xod4bpJsUqfgxYgBhLezUXGxMhm6jY8dod4DY3l0pZUwgrB_eoM8cVrmHgzC4_GwdAH";
+      var dashboard_settings = {"languages":{"supported":[{"id":1,"name":"العربية","rtl":1,"iso_code":"ar","country_code":"sa","flag":"https://assets.salla.sa/images/flags/ar.svg","status":true,"auto_translate":false,"order":0,"is_default":true}],"current":{"id":1,"name":"العربية","rtl":1,"iso_code":"ar","country_code":"sa","flag":"https://assets.salla.sa/images/flags/ar.svg","status":true,"auto_translate":false,"order":0,"is_default":true},"default":{"id":1,"name":"العربية","rtl":1,"iso_code":"ar","country_code":"sa","flag":"https://assets.salla.sa/images/flags/ar.svg","status":true,"auto_translate":false,"order":0,"is_default":true},"iso_code":"ar","feature":false}};
+      var mahly = {"public_domain_url":"https://mahally.com","download_app_url":"https://mahally.com?download-app","dashboard_url":"https://s.salla.sa/mahally"};
+      var baseStoreUrl = "https://ur-script.com";
+      var baseStoreUsername = "urscript";
+      var intercomSettings = {};
+      var assetsBaseUrl = "https://cdn.assets.salla.network/prod/admin/";
+      var sallaIOSApp = false;
+      var darkModeEnabled = false;
+      var operationConfig = {"operationLatestLink":"https://s.salla.sa/operations-logs/latest?limit=3&toasted","showMoreLink":"https://s.salla.sa/settings/component/operation-logs"};
+  </script> <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/core/libraries/jquery.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/core/libraries/bootstrap.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/loaders/pace.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/ui/moment/moment.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/styling/uniform.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/media/fancybox.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/notifications/sweetalert2.min.js?v=1.0.2"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/styling/switchery.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/selects/bootstrap-select.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/pickers/daterangepicker.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/visualization/d3/d3.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/inputs/autosize.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/inputs/bootstrap-maxlength.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/quill/quill.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/inputs/clipboard.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/pickers/color/spectrum.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/biomp/biomp.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/jquery.addrule.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/pages/form_checkboxes_radios.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/core/libraries/jquery-ui.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/styling/switch.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/jquery-confirm/jquery-confirm.js"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/ui/jquery.simpler-sidebar.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/uploader/js/fileinput.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/uploader/js/locales/ar.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/main.js?v=0.0.20"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/core/app.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/js/settings.c4ff4573ca7d3e31da4ae45fc869c6a1.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/charts/amcharts/amcharts.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/charts/amcharts/serial.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/charts/amcharts/pie.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/charts/amcharts/themes/light.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/charts/amcharts/plugins/responsive/responsive.min.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/bootstrap-iconpicker/js/bootstrap-iconpicker.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/vendor/salla/app.js"></script>
+<script type="28b087ebe96376e18ef78686-module" src="https://cdn.assets.salla.network/prod/@salla.sa/lit-components/v0.14.0/assets/index.js"></script>
+ <script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/js/dashboard.7893ccc7928ef13a6dcfd226275bf4f8.js"></script>
+<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+<script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/intl-tel-input/js/intlTelInput-jquery.min.f889374279c3fe06d61bcc5c2fb8d543.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" defer='defer' src="https://cdn.assets.salla.network/prod/admin/js/filepond.da7fafa356cc3b6ec4f3df03a9d06918.js"></script>
+<script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/sortable.min.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" defer='defer' src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/semantic.d56d69b7ae94a8270254828add3e233e.js"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/pickers/pickadate/picker.js"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+<script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/intl-tel-input/noneQIntlTell.5fdd37b64cd163664b319fc1dce7614a.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+ 
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+ $.ajaxSetup({
+  headers: {
+   'X-CSRF-Token': $('meta[name=_token]').attr('content'),
+   'Authorization': 'Bearer ' + window.token.key
+  }
+ });
+
+ window.sallaLegacy = Boolean(1);
+</script>
+
+  
+ <script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/js.cookie.min.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+
+ <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $('document').ready(function () {
+        $('#demo_store_bar').length ? $('#floating_menu_wrapper').addClass('demo') : null;
+    })
+</script>
+
+
+ </head>
+<!-- FIXME: hide sidebar for embedded app should be based on sales channel settings -->
+<body data-mobile-agent-version="2.0"
+       class=" settings-component-
+                normal-browser
+        store-entity-person 
+                        "
+>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N27W52C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Main navbar -->
+<div class="navbar navbar-inverse" id="navbar_box">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/" style="width: 25%; left: 50%">
+      <span class="logo"></span>
+    </a>
+    <!--@salah - link plan name-->
+
+    <a class="sidebar-mobile-main-toggle" id="toggle-sidebar"><i class="sicon-menu"></i></a>
+
+    <ul class="nav navbar-nav visible-xs navbar-top-mobile">
+      <li class="changelog-headsup"></li>
+      <li><a data-toggle="collapse" data-target="#navbar-user-mobile" class="mobile-avatar-box"><img src="https://www.gravatar.com/avatar/1c91c903025b9cdcf390beff7b42e220?s=80&amp;d=mm&amp;r=g" class="mobile-avatar" alt=""></a></li>
+    </ul>
+
+            <button id="new_dashboard_switch" class="btn btn-tiffany new-dashboard-switch new-dashboard-switch--mobile" style="position: absolute; left: 60px;"></button>
+      </div>
+
+  <div class="navbar-collapse collapse" id="navbar-mobile">
+    <div class="navbar-wrapper">
+      <div class="navbar-container">
+        <ul class="nav navbar-nav">
+          <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="sicon-menu"></i></a></li>
+        </ul>
+                  <form class="navbar-form navbar-left" action="https://s.salla.sa/search" method="get">
+    <div class="search-group d-flex ">
+    <div class="relative d-flex align-items-center search-input-container">
+        <input type="text" id="searchbox" name="keyword" class="form-control search-input input-lg"
+               placeholder="ابحث برقم الطلب ، اسم العميل ، رقم الشحنة"
+               value=""
+        />
+            <i id="tippy-trigger" type="button" class="multi-order-search-tooltip sicon-info"></i>
+    </div>
+
+        <select class="search-select hidden" id="search_input_type" name="search_type"
+                 data-width="100px"                 data-dropup-auto="false">
+                            <option value="orders"  >الطلبات
+                </option>
+                                        <option value="products"  >المنتجات
+                </option>
+                                        <option value="customers"  >العملاء
+                </option>
+                    </select>
+
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-tiffany btn-lg"><i class="sicon-search"></i></button>
+        </div>
+    </div>
+</form>
+
+
+
+
+        
+        <div id="header_nav_wrapper" class="rec-list rec-list--row-reverse rec-list--align-center gap-10">
+          <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown dropdown-user">
+              <a class="dropdown-toggle hidden-xs" data-toggle="dropdown" aria-expanded="false">
+                <img src="https://www.gravatar.com/avatar/1c91c903025b9cdcf390beff7b42e220?s=80&amp;d=mm&amp;r=g" alt="">
+                <span> محمد </span>
+                <i class="caret"></i>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="https://s.salla.sa/profile" data-ios-redirect><i class="sicon-user"></i> الملف الشخصي </a></li>
+                                  <li><a href="https://s.salla.sa/settings/component/notifications" data-ios-redirect><i class="sicon-notification"></i>  التنبيهات</a></li>
+                                <!-- TODO:: - add the class highlight when new updates are available -->
+                <li class="highlight"><a href="https://changelog.salla.sa/" rel="noreferrer" data-ios-redirect><i class="sicon-party-horn"></i> تحديثات المنصة </a></li>
+                <li class="highlight"><a class="loyalty-points extra-links" data-target-div="loyalty_points_dev" data-target-modal="loyalty_points_modal" data-url="https://s.salla.sa/marketplace/referrals/loyalty-points"><i class="sicon-gift"></i> نقاط الولاء </a></li>
+
+                
+                                  <li>
+                    <a href="https://s.salla.sa/features/login"
+                       rel="noreferrer" data-ios-redirect><i class="sicon-pen"></i> الاقتراحات </a>
+                  </li>
+                                <li class="divider"></li>
+                <li><a href="https://s.salla.sa/auth/logout" data-ios-redirect class="text-danger"><i class="sicon-send-out"></i>   تسجيل الخروج</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <button type="button" class="btn btn--outlined primary btn-header-nav p-0 rec-btn--rounded dark-toggle mobile-webview-hide">
+            <!-- TODO:: we will remove this class "hide" if there is a alert to the loyalty -->
+            <i class="sicon-moon"></i>
+          </button>
+          <button type="button" class="btn btn--outlined primary btn-loyalty btn-header-nav rec-btn--rounded p-0"
+        data-target-div="loyalty_points_dev" 
+        data-target-modal="loyalty_points_modal" 
+        data-url="https://s.salla.sa/marketplace/referrals/loyalty-points">
+  <!-- TODO:: we will remove this class "hide" if there is a alert to the loyalty -->
+  <span class="changelog-headsup hide"></span>
+  <span class="sicon-gift icon"></span>
+</button>
+
+
+
+                      <div class="tooltip-toggle bottom primary border-none mr-10">
+                          </div>
+          
+                        <button class="btn btn-tiffany new-dashboard-switch"></button>
+                    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-collapse collapse my-navbar" id="navbar-user-mobile">
+    <div class="navbar-item"><a href="https://s.salla.sa/profile"><i class="sicon-user"></i> الملف الشخصي </a></div>
+          <div class="navbar-item"><a href="https://s.salla.sa/app/alerts"><i class="sicon-notification"></i>  التنبيهات</a></div>
+        <div class="navbar-item"><a href="https://changelog.salla.sa/" target="_blank"><i class="sicon-party-horn"></i> تحديثات المنصة </a></div>
+          <div class="navbar-item"><a href="https://s.salla.sa/features/login" target="_blank"><i class="sicon-pen"></i> الاقتراحات </a></div>
+        <div class="navbar-item">
+      <a  class="loyalty-points"
+            data-target-div="loyalty_points_dev"
+            data-target-modal="loyalty_points_modal"
+            data-url="https://s.salla.sa/marketplace/referrals/loyalty-points">
+        <i class="sicon-gift"></i>
+          نقاط الولاء
+      </a>
+      </div>
+              <div class="navbar-item dark-toggle-wrapper mobile-webview-hide">
+        <a  class="dark-toggle">
+          <i class="sicon-moon"></i>
+          الوضع الليلي
+        </a>
+    </div>
+    <div class="navbar-item dark-toggle-wrapper mobile-webview-hide">
+      <a  class="dark-toggle">
+        <i class="sicon-moon"></i>
+        الوضع الليلي
+      </a>
+    </div>
+    <div class="navbar-item">
+      <a class="text-danger" href="https://s.salla.sa/auth/logout"><i class="sicon-send-out"></i>   تسجيل الخروج</a>
+    </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- /main navbar -->
+
+<div id="loyalty_points_dev"></div>
+<div id="referral_details_dev"></div>
+<div id="referral_statistics_dev"></div>
+
+
+
+<!-- Header -->
+<!-- Page container -->
+<div id="page_container" class="page-container">
+    <!-- Page content -->
+    <div class="page-content">
+                    <!-- Main sidebar -->
+<div class="sidebar sidebar-main">
+    <div class="sidebar-content">
+        <!-- User menu -->
+        <div class="sidebar-user sidebar-user--team">
+            <div class="media">
+                <div class="media-left no-padding" id="store_avatar">
+                    <div class="store-img-wrapper">
+                        <img id="store_avatar_img" class="store-img img-circle img-sm" alt="Urscript" src="https://cdn.salla.sa/OqYavo/JTeUHqdQk8Uw4nXke7dFEf7MbzbetusgI1feUcgX.jpg" />
+                        <a href="https://s.salla.sa/marketplace" class="badge badge--primary plan-name">برو</a>
+                    </div>
+                    <div class="store-name-plan">
+                                                                        <h6 class="store-name-side font-regular">
+                            Urscript
+                        </h6>
+                        <div>
+                                                        <div class="store-link dropdown">
+                                <a href="https://ur-script.com/?expires=1764784921&amp;identifier=92451676&amp;utm_source=dashboard&amp;signature=ab2d5419c14aaf8cbbf36323ff509535682d3d6e54105d12646dc483c6925584" target="_blank" class="btn visit-store">
+                                    زيارة المتجر
+                                    <i class="sicon-keyboard_arrow_left"></i>
+                                </a>
+                                <button class="btn share dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="sicon-share-alt"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-link">
+                                        <a href="javascript:void(0)" data-text="https://ur-script.com"
+                                           id="link_store_url"
+                                           class="copy-site-url"
+                                        >
+                                            <i class="sicon-swap-stroke"></i>
+                                            نسخ رابط المتجر
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a target="_blank"
+                                           data-sharer="whatsapp"
+                                           data-title=""
+                                           data-url="https://ur-script.com"
+                                           href="javascript:void(0)">
+                                            <i class="sicon-whatsapp"></i>
+                                            واتساب
+                                        </a>
+                                    </li>
+                                                                                                                                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /user menu -->
+
+        <!-- Main navigation -->
+        <div class="sidebar-category sidebar-category-visible">
+            <div class="category-content no-padding">
+                <ul class="navigation navigation-main navigation-accordion">
+
+                    
+
+                    <li class=""><a
+                                href="https://s.salla.sa/"><i class="sicon-home"></i>
+                            <span> الرئيسية</span></a></li>
+                                            <li class="">
+                            <a href="https://s.salla.sa/products"><i class="sicon-t-shirt"></i>
+                                <span> المنتجات</span></a></li>
+                    
+                                            <li class="">
+                            <a href="https://s.salla.sa/orders">
+                                <i class="sicon-box"></i>
+                                <span> الطلبات</span>
+                                                                    <span class='badge bg-danger'>1456</span>
+                                                            </a>
+                        </li>
+                                                                <li class="">
+                            <a href="https://s.salla.sa/customers"><i class="sicon-users"></i>
+                                <span> العملاء</span></a></li>
+                                                                <li class=""><a
+                                    href="https://s.salla.sa/reports"><i class="sicon-chart-pie"></i>
+                                <span> التقارير</span></a></li>
+                                                                <li class=""><a
+                                    href="https://s.salla.sa/feedback"><i class="sicon-chat-conversation-alt"></i> <span>الأسئلة والتقييمات</span> <span class='badge bg-danger' id='feedback_badge'>2</span>
+                            </a></li>
+                                                                <li class=""><a
+                                    href="https://s.salla.sa/pages"><i class="sicon-newspaper"></i>
+                                <span> الصفحات التعريفية</span></a></li>
+                    
+                                            <li class="">
+                                <a href="https://s.salla.sa/marketing/marketing_tools">
+                                    <i class="sicon-megaphone"></i>
+                                <span> الأدوات التسويقية</span>
+                            </a>
+                        </li>
+                    
+                                                                <li class="">
+                            <a href="https://s.salla.sa/addons/salla-chat">
+                                <i class="sicon-chat-app"></i>
+                                <span> سلة شات</span>
+                                                                    <span class="badge badge--primary">جديد</span>
+                                                            </a>
+                        </li>
+                                        <li class="navigation-header"><span>قنوات البيع</span></li>
+                                            <li class="">
+                            <a href="https://s.salla.sa/mahally">
+                                <i class="sicon-mahally"></i>
+                                <span>محلي</span>
+                            </a>
+                        </li>
+                    
+                                            <li class="">
+                <a href="https://s.salla.sa/addons/vendors">
+                    <i class="sicon-vendor"></i>
+                    <span>سوق الجملة</span>
+                                            <span class="badge badge--primary">جديد</span>
+                                    </a>
+            </li>
+                                    <li class="">
+                <a href="https://s.salla.sa/addons/salla-point">
+                    <i class="sicon-pos"></i>
+                    <span>سلة بوينت</span>
+                                    </a>
+            </li>
+                                                                
+                                            <li class="navigation-header">
+                            <span>أدوات مساندة</span>
+                        </li>
+
+                                                    <li class="">
+                                <a href="https://s.salla.sa/experts">
+
+                                    <i class="sicon-briefcase"></i>
+                                    <span>خدمات التاجر</span>
+                                </a>
+                            </li>
+                        
+                                                    <li class="">
+                                <a href="https://s.salla.sa/influencers">
+
+                                    <i class="sicon-user-list"></i>
+                                    <span>المؤثرين</span>
+                                </a>
+                            </li>
+                                                
+                    
+                                            <li class="">
+                            <a href="/marketing/ads/dashboard?legacy=0">
+                                <i class="sicon-megaphone"></i>
+                                <span> اعلانات سلة</span>
+                                <span class="badge badge--primary">جديد</span>
+                            </a>
+                        </li>
+                    
+                                            <li class="navigation-header"><span>الاعدادات</span></li>
+
+                        <li class="">
+    <a href="https://s.salla.sa/marketplace">
+        <i class="sicon-store"></i>
+        <span>باقة المتجر</span>
+                    
+            </a>
+</li><li class="">
+    <a href="https://s.salla.sa/settings">
+        <i class="sicon-settings"></i>
+        <span>إعدادات المتجر</span>
+                    
+            </a>
+</li><li class="">
+    <a href="https://s.salla.sa/wallet">
+        <i class="sicon-wallet"></i>
+        <span>المحفظة والفواتير</span>
+                    
+            </a>
+</li>
+                    
+                                            <li class="navigation-header"><span>مظهر المتجر</span></li>
+
+                        <li class="">
+    <a href="https://s.salla.sa/marketplace/themes">
+        <i class="sicon-store"></i>
+        <span>متجر الثيمات</span>
+                    
+            </a>
+</li><li class="">
+    <a href="https://s.salla.sa/marketplace/themes/management">
+        <i class="sicon-window-layout"></i>
+        <span>تصميم المتجر</span>
+                    <span class="badge badge--primary">جديد</span>
+            </a>
+</li><li class="">
+    <a href="https://s.salla.sa/mobile-app">
+        <i class="sicon-iphone"></i>
+        <span>صانع التطبيقات</span>
+                    
+            </a>
+</li>
+                    
+                                            <li class="navigation-header"><span>متجر التطبيقات</span></li>
+
+                        <li class="">
+    <a href="https://s.salla.sa/apps">
+        <i class="sicon-puzzle"></i>
+        <span>التطبيقات المثبتة</span>
+                    
+            </a>
+</li>
+
+                        <li>
+                            <a href="https://apps.salla.sa?s=92451676&amp;m=1743594430&amp;sig=2d88de64bf1cde318f5c6d086aeb66842c1990530f983d2a07c0cbc6ca24f705&amp;t=1764784921" target="_blank">
+                                <i class="sicon-layout-grid-rearrange"></i>
+                                <span>زيارة متجر التطبيقات</span>
+                            </a>
+                        </li>
+                    
+                    <li class="navigation-header hidden-xs"><span>تطبيق التاجر</span></li>
+                    <p style="margin: 0 18px 0 5px; display: inline-block;" class="align-center hidden-xs"><a
+                                href="https://itunes.apple.com/sa/app/slt-ttbyq-altajr/id1148458340?mt=8"
+                                target="_blank" class="appstore"></a></p>
+                    <p style="margin: 0; display: inline-block;" class="align-center hidden-xs"><a
+                                href="https://play.google.com/store/apps/details?id=com.emoney.sallacp" target="_blank"
+                                class="googleplay"></a></p>
+                </ul>
+            </div>
+        </div>
+        <!-- /main navigation -->
+    </div>
+</div>
+<!-- /main sidebar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+$(document).ready( ()=> {
+    // let shareLinks = document.querySelectorAll('.store-link.dropdown .dropdown-menu .dropdown-link a');
+    let shareLinks = document.querySelectorAll('.copy-site-url');
+    shareLinks.forEach(shareLink => {
+        shareLink.addEventListener('click', () => {
+        if (shareLink.classList.contains('copy-site-url')) {
+          let storeURL = $(shareLink).data('text'),
+            iconWrapper = $(shareLink).closest('.store-link').find($('.btn.share')),
+            tempField = document.createElement("textarea");
+          tempField.value = storeURL;
+          document.body.appendChild(tempField);
+          tempField.select();
+          document.execCommand("Copy");
+          tempField.remove();
+          iconWrapper.addClass('copied');
+          setTimeout(() => {
+            iconWrapper.removeClass('copied');
+          }, 1000);
+        }
+      })
+    })
+
+    $('.navigation-main a').click(function () {
+        // Remove the activation slug value whenever page changes
+        localStorage.removeItem('activation_slug');
+    })
+})
+</script>
+
+        
+        <!-- Main content -->
+        <div class="content-wrapper" id="content_box">
+            
+                            <div id="res_sf">
+                    
+                                            <form class="navbar-form navbar-left" action="https://s.salla.sa/search" method="get">
+    <div class="search-group d-flex ">
+    <div class="relative d-flex align-items-center search-input-container">
+        <input type="text" id="searchbox" name="keyword" class="form-control search-input input-lg"
+               placeholder="ابحث برقم الطلب ، اسم العميل ، رقم الشحنة"
+               value=""
+        />
+            <i id="tippy-trigger" type="button" class="multi-order-search-tooltip sicon-info"></i>
+    </div>
+
+        <select class="search-select hidden" id="search_input_type" name="search_type"
+                                data-dropup-auto="false">
+                            <option value="orders"  >الطلبات
+                </option>
+                                        <option value="products"  >المنتجات
+                </option>
+                                        <option value="customers"  >العملاء
+                </option>
+                    </select>
+
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-tiffany btn-lg"><i class="sicon-search"></i></button>
+        </div>
+    </div>
+</form>
+
+
+
+
+                                        
+                </div>
+            
+                                    <!-- Page header -->
+                    <div class="page-header page-header-xs" id="page_header_box">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="page-header-content">
+                                                                        <!-- Load custom bread crumbs for embedded app -->
+                                    
+                                    <!-- todo :: did you need page-title ? -->
+    <div class="page-title breadcrumb-container mobile-webview-hide">
+        <nav class="nav-breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                                                            <li class="breadcrumb-item home">
+                            <a href="https://s.salla.sa">
+                                                                    <i class="sicon-home"></i>
+                                                                الرئيسية
+                            </a>
+                        </li>
+                                                                                <li class="breadcrumb-item ">
+                            <a href="https://s.salla.sa/settings">
+                                                                إعدادات المتجر
+                            </a>
+                        </li>
+                                                                                <li class="breadcrumb-item active">Webhooks</li>
+                                                </ol>
+        </nav>
+    </div>
+                                                                            <div class="heading-elements heading-help">
+                                            <div class="relative">
+    <span class="font-12 text-primary help-title hide">
+    </span>
+    <div class="btn-group heading-btn">
+        <a id="heading_help_btn" class="btn bg-tiffany btn-icon btn-sm">
+            <i class="sicon-life-ring"></i>
+            <span>مساعدة</span>
+            <i class="sicon-keyboard_arrow_down"></i>
+        </a>
+    </div>
+
+    <div id="helpCenterPanel" class="help">
+    
+    <div class="help__heading">
+        <h6 id="helpPanelTitle">المقالات</h6>
+        <div id="topArticleTitle" class="help__single-heading" style="display: none">
+            <button id="helpBack" data-search="" type="button" class="btn no-border btn--outlined primary mr-10"
+                title="رجوع">
+                <i class="sicon-keyboard_arrow_right"></i>
+            </button>
+            <h6 class="single-title" title="المقالات">المقالات</h6>
+            <a id="gotoHelpCenter" type="button" target="_blank" class="btn no-border btn--outlined primary"
+                title="القراءة على مركز المساعدة">
+                <i class="sicon-share"></i>
+            </a>
+        </div>
+        <button id="helpExpand" type="button" class="btn no-border btn-xs btn--outlined primary p-0">
+            <i class="sicon-arrow-expand mr-5 icon"></i>
+            <span class="text"></span>
+        </button>
+    </div>
+    
+    <div id="helpSearchBox" class="search-group help__search">
+        
+        <button id="clearHelpSearch" class="btn btn-link btn-remove clear-btn">
+            <i class="sicon-cancel"></i>
+        </button>
+        <i class="sicon-search searched-icon"></i>
+
+        
+        <input type="text" id="helpSearchInput" name="help-keyword" class="form-control search-input input-lg"
+            placeholder="ابحث عن ما تريد...">
+        <div class="input-group-btn">
+            <button id="submitSearch" type="submit" class="btn btn-tiffany btn-lg"><i
+                    class="sicon-search"></i></button>
+        </div>
+    </div>
+
+    
+    <div class="help__body">
+        
+        <div id="helpLoader" class="loader-wrap" style="display: none">
+            <div class="loader"></div>
+        </div>
+        
+        <ul id="mainSections" class="list-unstyled help__main-sections">
+        </ul>
+
+        
+        <div id="helpResults" class="help__results" style="display:none">
+        </div>
+
+        
+        <div id="noHelpResults" class="help__no-results" style="display: none">
+            <i class="sicon-inbox"></i>
+            <h3>لم نستطع إيجاد ما تبحث عنه</h3>
+            <small>هل يمكنك تجربة كلمة اخرى؟</small>
+        </div>
+
+        
+        <article id="helpSingle" class="help__single" style="display: none">
+        </article>
+    </div>
+</div>
+
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $(document).ready(function() {
+        let searchBox = $('#helpSearchBox'),
+            helpCenterPanel = $('#helpCenterPanel'),
+            loader = $('#helpLoader'),
+            mainSections = $('#mainSections'),
+            results = $('#helpResults'),
+            noResults = $('#noHelpResults'),
+            panelToggler = $('#heading_help_btn'),
+            article = $('#helpSingle'),
+            topArticleTitle = $('#topArticleTitle'),
+            helpPanelHead= $('.help__heading'),
+            helpPanelTitle = $('#helpPanelTitle');
+
+        // Toggle help panel
+        panelToggler.click(function() {
+            articleLoad()
+        });
+
+        // Expand panel
+        $('#helpExpand').click(function(event) {
+            helpCenterPanel.toggleClass('expanded');
+        });
+
+        // Clear Search Term
+        $('#clearHelpSearch').click(() => {
+            $('#helpSearchInput').val('');
+            searchBox.removeClass('searched');
+            results.hide();
+            noResults.hide();
+            mainSections.show();
+        });
+
+        $('#helpSearchInput').on('keyup', _.debounce(function(e) {
+            if(e.target.value == ''){
+                $('#clearHelpSearch').click();
+                return
+            }
+            $('#submitSearch').click();
+        }, 500));
+
+        // Submit Search
+        $('#submitSearch').click(() => {
+            if($('#helpSearchInput').val().trim() == '') {return}
+            results.hide();
+            noResults.hide();
+            mainSections.hide();
+            loader.show();
+            searchBox.addClass('searched');
+
+            avoidShowLoading();
+            $.ajax({
+                url: 'https://s.salla.sa/help-center/panel/search',
+                data: {
+                    'keyword': $('#helpSearchInput').val()
+                },
+                type: 'GET',
+                dataType: 'json',
+                success: function(e) {
+                    handleSuccess(e);
+
+                    loader.hide();
+                    if (e.data && e.data.results_count == 0) {
+                        noResults.show()
+                    } else {
+                        results.show()
+                    }
+
+                    hideLoading();
+
+                    setArticleEvents();
+                },
+                error: laravel.ajax.errorHandler
+            });
+        });
+
+        function articleLoad (articleId) {
+            hideOnClickOutside('.heading-help', helpCenterPanel);
+            panelToggler.toggleClass('opened');
+            helpCenterPanel.toggleClass('active');
+            stopVideo()
+
+            if ($.trim(mainSections.html()) == '') {
+                mainSections.hide();
+                loader.show();
+                avoidShowLoading();
+                $.ajax({
+                    url: 'https://s.salla.sa/help-center/panel/list',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(e) {
+                        handleSuccess(e);
+
+                        loader.hide();
+                        mainSections.show();
+
+                        hideLoading();
+
+                        setArticleEvents();
+
+                        articleId && $(`[data-id="${articleId}"]`).click();
+                    },
+                    error: laravel.ajax.errorHandler
+                });
+            }
+        }
+
+        function setArticleEvents() {
+            // Open article
+            $('.article-title').click(function() {
+                // console.log('Data-Id', $(this).attr('data-id'));
+
+                let search = $(this).attr('data-search');
+                loader.show();
+                mainSections.hide();
+                results.hide();
+                searchBox.hide();
+                helpPanelTitle.hide();
+                helpPanelHead.addClass('disabled');
+                topArticleTitle.show();
+                topArticleTitle.find('.single-title').text('...');
+
+                avoidShowLoading();
+                $.ajax({
+                    url: 'https://s.salla.sa/help-center/panel/article/:id'.replace(':id', $(
+                        this).attr('data-id')),
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(e) {
+                        handleSuccess(e);
+
+                        loader.hide();
+                        helpPanelHead.removeClass('disabled');
+
+                        article.show();
+                        // to pervent any article to open in any other offset
+                        article.scrollTop(0)
+
+                        if (e.data && e.data.title) {
+                            topArticleTitle.find('.single-title').text(e.data.title);
+                            topArticleTitle.find('.single-title').attr('title', e.data
+                                .title);
+                            topArticleTitle.find('#gotoHelpCenter').attr('href',
+                                'https://help.salla.sa/article/' + e.data.id);
+                            $('#helpBack').attr('data-search', search);
+                        }
+
+                        hideLoading();
+                    },
+                    error: function(){
+                        loader.hide();
+                        helpPanelHead.removeClass('disabled');
+                        laravel.ajax.errorHandler
+                    }
+                });
+            })
+        }
+
+        // Back Link
+        $('#helpBack').click(() => {
+            // back to results
+            stopVideo();
+            article.hide();
+            topArticleTitle.hide();
+            helpPanelTitle.show();
+            searchBox.show();
+            if ($('#helpBack').attr('data-search') == '1') {
+                results.show();
+                return
+            } 
+            mainSections.show();
+        })
+
+        // Helper functions
+        function handleSuccess(payload){
+             // render sections
+            if (payload.sections) {
+                if (payload.drawMode === 'append') {
+                    laravel.appendSections(payload.sections);
+                } else if (payload.drawMode === 'prepend') {
+                    laravel.appendSections(payload.sections,true);
+                } else if (payload.drawMode === 'replace') {
+                    laravel.replaceSections(payload.sections);
+                } else {
+                    laravel.redrawSections(payload.sections);
+                }
+            }
+        }
+        function hideOnClickOutside(selector, panel) {
+            const outsideClickListener = (event) => {
+                const $target = $(event.target);
+                if (!$target.closest(selector).length && $(panel).is(':visible')) {
+                    panel.removeClass('active');
+                    stopVideo()
+                    removeClickListener();
+                }
+            }
+
+            const removeClickListener = () => {
+                document.removeEventListener('click', outsideClickListener);
+            }
+
+            document.addEventListener('click', outsideClickListener);
+        }
+        function stopVideo() {
+            $('#helpSingle iframe')?.attr('src', $('#helpSingle iframe').attr('src'));
+        }
+
+        // Activation Guideline Implemteation for extra help center
+        const activationSlug = localStorage.getItem('activation_slug');
+        const activationRoutes = ['/products/', '/marketplace/themes/management', '/pages', '/domain', '/settings/component/basic'];
+        const pathName = window.location.pathname;
+
+        if (activationSlug && activationRoutes.includes(pathName)) {
+            const helpCenterHeadingWrapper = $('.heading-help');
+            helpCenterHeadingWrapper.addClass('extra-help');
+
+            switch (activationSlug) {
+                case 'product-setup':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف تعرض منتجاتك بشكل احترافي؟');
+                    articleLoad(1642436095)
+                break;
+                case 'store-design':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف تصمِّم متجرك؟');
+                    articleLoad(868398328)
+                break;
+                case 'communication-channels':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف تفعِّل قنوات التواصل مع العملاء؟');
+                    articleLoad(229626873)
+                break;
+                case 'introduction-page':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف تضيف الصفحات التعريفية؟');
+                    articleLoad(1601499898)
+                break;
+                case 'sbc-certificate':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف توثِّق شهادة المركز السعودي للأعمال؟');
+                    articleLoad(2067673284)
+                break;
+                case 'custom-domain':
+                    helpCenterHeadingWrapper.find('.help-title').text('كيف تحجز دومين خاص؟');
+                    articleLoad(693178875)
+                break;
+            }
+        }
+    })
+</script>
+</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /page header -->
+                
+            <!-- Content area -->
+            <div class="content ">
+
+                                                                
+                
+                <div id="progress-report-modal" class="modal modal-backup fade in col-sm-6 col-sm-offset-3" tabindex="-1" style="direction: ltr;">
+
+</div>
+
+                                    <script type="28b087ebe96376e18ef78686-text/javascript">
+        $(document).ready(function () {
+
+            $('.link_close_announcement').click(function () {
+
+                var url_close_announcement = 'https://s.salla.sa/announcement/#id/close';
+                url_close_announcement = url_close_announcement.replace('#id', $(this).data('announcement_id'));
+
+                $.ajax({
+                    url: url_close_announcement,
+                    type: "GET",
+                    cache: false,
+                    success: function (resp) {
+                    },
+                    error: function (err) {
+                    }
+                });
+            });
+        });
+    </script>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+    <div id="div-dashboard-setting-model"></div>
+
+    <div class="row btns-row mt-30">
+    <div class="col-xs-7 sub-btns"></div>
+    <div class="col-xs-5 main-btn">
+                    <a href="#!" data-toggle="modal" data-target="#modal_webhook" class="load-data-webhook btn btn-tiffany btn-rounded btn-xlg" data-inline-loader>
+                <i class="sicon-arrow-merge"></i>
+                إضافة جديد
+            </a>
+            </div>
+    <div class="text-right center sub-btns">
+        <a class="btn btn-filter-toggle" href="/settings/webhooks/logs"
+          ><i class="sicon-archive"></i>سجل الاحداث
+        </a>
+      </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">
+                    <i class="sicon-arrow-merge inline-el"></i>
+                    Webhooks
+                </h6>
+            </div>
+            <div class="table-responsive">
+                                <table class="table text-nowrap table-no-top-border">
+                    <thead>
+                        <tr>
+                            <th>اسم الحدث</th>
+                            <th>نوع الحدث</th>
+                            <th>تفعيل/تعطيل</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                <tr class="special-offer-listing-entry">
+                                <td class="coupon-cell">
+                                    <a class="load-data-webhook entry" id="webhook-6860248" data-webhook-id="6860248">انشاء الطلب</a>
+                                </td>
+                                <td class=" text-left">
+                                    <span>
+                                    تم إنشاء طلب
+                                    </span>
+                                </td>
+
+                                <td class="text-center">
+                                    <input type="checkbox" class="switchery webhook-switch"
+                                           id="checkbox-webhook-6860248"
+                                           data-webhook-id="6860248"
+                                           checked
+                                           value="6860248"
+                                    />
+                                </td>
+                            </tr>
+                                                </tbody>
+                </table>
+                            </div>
+                    </div>
+    </div>
+</div>
+
+<div id="webhook_form_div"></div>
+
+<div style="display: none">
+	<div id="headerRowTemplate" class="row">
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group mb-20">
+				<input class="form-control full-bordered" name="headers[key][]" type="text" placeholder="Header Key" >
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group mb-20">
+				<input class="form-control full-bordered" name="headers[value][]" type="text" placeholder="Header Value" >
+			</div>
+		</div>
+	</div>
+</div>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $('.bootstrap-select').selectpicker();
+    $(document).ready(function () {
+
+        $(document).on('click', '.load-data-webhook', function (e) {
+            e.preventDefault();
+
+            $('#webhook_form_div').html('');
+            $('.modal-backdrop').remove();
+            var webhook_id = $(this).attr('data-webhook-id') ?? 0;
+
+            var url = 'https://s.salla.sa/settings/webhooks/get_form/:webhook_id';
+            url = url.replace(':webhook_id', webhook_id);
+
+            showLoading(e)
+            $.ajax({
+                url: url,
+                type: "GET",
+                data: {},
+                cache: false,
+                success: function (resp) {
+
+                    $('#webhook_form_div').html(resp);
+                    $("#modal_webhook").modal('toggle');
+
+                    hideLoading();
+                },
+                error: function (err) {
+                    console.log(err)
+                    hideLoading();
+                }
+            })
+        });
+
+        $(document).on('change', 'input.webhook-switch', function (e) {
+            var _id = $(this).attr('data-webhook-id');
+            var _status = 'destroy';
+            if (this.checked) {
+                _status = 'restore';
+            }
+
+            var url = 'https://s.salla.sa/settings/component/webhooks/modify/:webhook_id';
+            url = url.replace(':webhook_id', _id);
+
+            showLoading();
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {
+                    action: _status,
+                    _token: _token,
+                    id: _id
+                },
+                cache: false,
+                success: function (resp) {
+                    hideLoading();
+                    laravel.ajax.successHandler(resp);
+                },
+                error: function (err) {
+                    hideLoading();
+                    laravel.ajax.errorHandler(err);
+                }
+            })
+        });
+    })
+</script>
+
+            </div>
+            <!-- /content area -->
+
+                             <div class="footer text-muted">
+                    <a href="https://s.salla.sa" target="_blank"> سلة</a> &copy; 2025
+                </div>
+
+                                                                                                                    </div>
+        <!-- /main content -->
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+
+<div id="new_dashboard_switch_modal" class="modal fade modal-backup">
+  <div class="modal-dialog" style="direction: rtl;">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        انتقل إلى لوحة التحكم الجديدة
+        <button type="button" @click="$emit('closeModal')" class="close" data-dismiss="modal">×</button>
+      </div>
+      <div class="modal-body">
+          <div class="d-flex flex-column align-items-start justify-content-start gap-20">
+              <h2 class="text-xl text-primary m-0">من السهولة إلى الأسهل: تجاوزنا منافسنا الوحيد تجربتنا السابقة</h2>
+              <img src="https://cdn.assets.salla.network/prod/admin/images/new_dashboard/new_dashboard_screenshot.png" class="wide" alt="Salla New Dashboard" />
+              <div class="d-flex flex-column gap-15">
+                  <h4 class="font-normal font-15 m-0">والعديد من المزايا، اكتشفها الآن</h4>
+                  <ul class="rec-list d-flex align-items-center justify-content-start flex-wrap gap-20 new-dash-features-list">
+                      <li>
+                        <h4 class="font-16 d-flex align-items-center justify-content-start gap-10 m-0">
+                            <i class="d-flex align-items-center justify-content-center new-dash-upgrade-icon font-25 text-primary hgi-stroke hgi-analytics-up"></i>
+                            تحليلات ذكية، رؤى أعمق
+                        </h4>
+                      </li>
+                      <li>
+                         <h4 class="font-16 d-flex align-items-center justify-content-start gap-10 m-0">
+                          <i class="d-flex align-items-center justify-content-center new-dash-upgrade-icon font-25 text-primary hgi-stroke hgi-store-verified-02"></i>
+                          قنوات بيع متعددة
+                         </h4>
+                      </li>
+                      <li>
+                         <h4 class="font-16 d-flex align-items-center justify-content-start gap-10 m-0">
+                          <i class="d-flex align-items-center justify-content-center new-dash-upgrade-icon font-25 text-primary hgi-stroke hgi-blush-brush-02"></i>
+                          لغة التصميم الجديدة
+                         </h4>
+                      </li>
+                      <li>
+                         <h4 class="font-16 d-flex align-items-center justify-content-start gap-10 m-0">
+                          <i class="d-flex align-items-center justify-content-center new-dash-upgrade-icon font-25 text-primary hgi-stroke hgi-shirt-01"></i>
+                          تحكم المخزون، أسرع وأدق
+                         </h4>
+                      </li>
+                      <li>
+                         <h4 class="font-16 d-flex align-items-center justify-content-start gap-10 m-0">
+                          <i class="d-flex align-items-center justify-content-center new-dash-upgrade-icon font-25 text-primary hgi-stroke hgi-view"></i>
+                          معاينات لحظية، كفاءة وقوة
+                         </h4>
+                      </li>
+                  </ul>
+              </div>
+              <p class="wide text-center font-14 m-0">يمكنك العودة إلى لوحة التحكم القديمة في أي وقت </p>
+          </div>
+      </div>
+      <div class="modal-footer no-icons">
+        <button id="new_dashboard_switch" class="btn btn-tiffany">ابدأ تغير تجارتك للأحسن</button>
+        <button class="btn btn-info btn-close" data-dismiss="modal">لا شكرا</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $(document).ready(function () {
+        document.querySelectorAll(".new-dashboard-switch").forEach(element => {
+            element.addEventListener("click", function() {
+                window.location.href = `https://${window.location.hostname}?legacy=0`;
+            });
+        });
+    });
+</script>
+
+<div class="pace-demo hidden">
+    <div class="theme_tail_circle">
+        <div class="pace_progress" data-progress-text="60%" data-progress="60"></div>
+        <div class="pace_activity"></div>
+    </div>
+</div>
+
+
+    <div id="floating_menu_wrapper">
+        <button data-intercom="button" id="support_chat" class="btn fm-item" data-label="الدعم الفني" data-service="intercom">
+            <svg width="28px" height="32px" viewBox="0 0 28 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="support_chat" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="support_chat_path" fill="#004D5A" fill-rule="nonzero">
+                        <path d="M28,32 C28,32 23.2863266,30.1450667 19.4727818,28.6592 L3.43749107,28.6592 C1.53921989,28.6592 0,27.0272 0,25.0144 L0,3.6448 C0,1.632 1.53921989,0 3.43749107,0 L24.5615088,0 C26.45978,0 27.9989999,1.632 27.9989999,3.6448 L27.9989999,22.0490667 L28,22.0490667 L28,32 Z M23.8614088,20.0181333 C23.5309223,19.6105242 22.9540812,19.5633836 22.5692242,19.9125333 C22.5392199,19.9392 19.5537934,22.5941333 13.9989999,22.5941333 C8.51321617,22.5941333 5.48178311,19.9584 5.4277754,19.9104 C5.04295119,19.5629428 4.46760991,19.6105095 4.13759108,20.0170667 C3.97913051,20.2124916 3.9004494,20.4673395 3.91904357,20.7249415 C3.93763774,20.9825435 4.05196575,21.2215447 4.23660523,21.3888 C4.37862552,21.5168 7.77411059,24.5386667 13.9989999,24.5386667 C20.2248893,24.5386667 23.6203743,21.5168 23.7623946,21.3888 C23.9467342,21.2215726 24.0608642,20.9827905 24.0794539,20.7254507 C24.0980436,20.4681109 24.0195551,20.2135019 23.8614088,20.0181333 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+        </button>
+    </div>
+
+<iframe id="instagram_frame" style="display: none;"></iframe>
+
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/selectize/js/standalone/selectize.min.js?v=0.1"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/selectize/js/selectize_no_results.js?v=0.1"></script>
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $(document).ready(function () {
+        $('.search-select').selectpicker();
+        $('.search-select').show();
+
+
+        // floating menu script ---
+        $(document).ready(function () {
+                        var floatingMenu = $('#floating_menu_wrapper');
+
+            floatingMenu.addClass('reveal');
+
+            $('[data-intercom]').on('click', function () {
+                if ($(this).hasClass('open')) {
+                    $(this).toggleClass('open');
+                    Intercom('hide');
+                    return;
+                }
+
+                $(this).toggleClass('open');
+                Intercom('show');
+            });
+                    })
+
+        if ("ontouchstart" in document.documentElement) {
+            $('li.dropdown a').on('click', function (event) {
+
+                if ($(this).hasClass('dropdown-filter') == false && $(this).hasClass('dropdown-link') == false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $(this).parent().siblings().removeClass('open');
+                    $(this).parent().toggleClass('open');
+                }
+
+            });
+        }
+
+        $('.alert-box.dark.bottom').length != 0 && $('.alert-box.mobile-upgrade-banner').remove();
+    });
+</script>
+
+    <script type="28b087ebe96376e18ef78686-text/javascript">
+        window.intercomSettings.app_id = "tsadiujc";
+        window.intercomSettings.user_hash = "4db4d19808721c89a64639962d79f386be12c481b442d9317d394c4b42753302";
+        window.intercomSettings.user_id = 5740827;
+        window.intercomSettings.name = "محمد";
+        window.intercomSettings.email = "mohammedeasa51@gmail.com";
+        window.intercomSettings.mobile = "+9647729379356";
+        window.intercomSettings.created_at = 1760620434;
+        window.intercomSettings.instagram_status =  false ;
+                    window.intercomSettings.company = dataLayer[0].store;
+        //because some times it become too long about, we substr it.
+
+        let about = "&lt;p&gt;UR سكربت: مبرمج ومُبتكر لقطع ماتركس وبائع لها. نسعى لتقديم أفضل الحلول البرمجية لعشاق الألعاب.&lt;/p&gt;";
+        window.intercomSettings.company.about= about.substr(0,100);
+
+                function getURLParam(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
+
+        var utm_source = getURLParam('utm_source') !== null ? getURLParam('utm_source') : Cookies.get('utm_source');
+        var utm_medium = getURLParam('utm_medium') !== null ? getURLParam('utm_medium') : Cookies.get('utm_medium');
+        var utm_campaign = getURLParam('utm_campaign') !== null ? getURLParam('utm_campaign') : Cookies.get('utm_campaign');
+
+        if (utm_source !== null && typeof utm_source !== undefined) {
+            window.intercomSettings.utm_source = utm_source;
+        }
+        if (utm_medium !== null && typeof utm_medium !== undefined) {
+            window.intercomSettings.utm_medium = utm_medium;
+        }
+        if (utm_campaign !== null && typeof utm_campaign !== undefined) {
+            window.intercomSettings.utm_campaign = utm_campaign;
+        }
+        
+                    </script>
+
+    
+            <script type="28b087ebe96376e18ef78686-text/javascript">(function () {
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === "function") {
+                    ic('reattach_activator');
+                    ic('update', intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments)
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args)
+                    };
+                    w.Intercom = i;
+
+                    function l() {
+                        var s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'https://widget.intercom.io/widget/tsadiujc';
+                        var x = d.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    }
+
+                    if (w.attachEvent) {
+                        w.attachEvent('onload', l);
+                    } else {
+                        w.addEventListener('load', l, false);
+                    }
+                }
+            })()</script>
+    
+
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $('.rec-ls-field').each(function () {
+        initFieldLang($(this));
+    });
+
+    function initFieldLang(element) {
+        if (!element.is('.field-lang-initiated'))
+            element.fieldLangSwitcher();
+    }
+</script><script type="28b087ebe96376e18ef78686-text/javascript">
+    
+   var ignoreKeys = ["__said", "__ssid", "_fbp", "_scid", "cf_", "XSRF-TOKEN", "_gac", "_ga", "_twitter_sess", "personalization_id", "_hjid", "intercom-session-"];
+   ignoreKeys.push("__saaid");
+    
+  function checkAndCleanCookies() {
+    if (new TextEncoder().encode(document.cookie).length < 16000) {
+      return;
+    }
+
+    document.cookie.split("; ").forEach(function(cookie) {
+      var cookieItem = cookie.split("=");
+      if(cookieItem[0].trim() === "__saaid"){
+        ignoreKeys.push(cookieItem[1]);
+      }
+    });
+
+
+    document.cookie.split("; ").forEach(function (cookie) {
+      if (!ignoreKeys.includes(cookie.split("=")[0].trim())) {
+        
+        
+        document.cookie = key + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      }
+    });
+  }
+  setInterval(checkAndCleanCookies, 10000);//10 seconds
+</script>
+    <script type="28b087ebe96376e18ef78686-application/javascript">
+      window.Salla = window.Salla || {};
+      window.Salla.Events = {"dashboard::page.view":{"route":"cp.settings.show_component","link":"https:\/\/s.salla.sa\/settings\/component\/webhooks","fingerprint":"a936a031e9a6bf071d085779b6165351dec1d21e"}};
+    </script>
+    <script src="https://cdn.assets.salla.network/prod/admin/vendor/salla/events.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    [
+        {supported: 'Promise' in window, fill: 'https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js'},
+        {supported: 'fetch' in window, fill: 'https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js'},
+        {supported: 'CustomEvent' in window && 'log10' in Math && 'sign' in Math &&  'assign' in Object &&  'from' in Array &&
+                ['find', 'findIndex', 'includes'].reduce(function(previous, prop) { return (prop in Array.prototype) ? previous : false; }, true), fill: '../../bin/polyfill/doka.polyfill.min.js'}
+    ].forEach(function(p) {
+        if (p.supported) return;
+        document.write('<script src="' + p.fill + '"><\/script>');
+    });
+</script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/doka/doka.min.js"></script>
+<script type="28b087ebe96376e18ef78686-text/javascript" src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/plugins/doka/doka.polyfill.min.js"></script>
+<script src="https://script.tapfiliate.com/tapfiliate.js" type="28b087ebe96376e18ef78686-text/javascript" async></script>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    (function(t,a,p){t.TapfiliateObject=a;t[a]=t[a]||function(){ (t[a].q=t[a].q||[]).push(arguments)}})(window,'tap');
+
+    tap('create', '14014-c020c7', { integration: "javascript" });
+
+                tap('detect');
+    
+</script>
+
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    //this function will work cross-browser for loading scripts asynchronously
+    function loadScript(src, callback) {
+
+        if (typeof Salla !== 'undefined' && 'websocket' in Salla) {
+            callback();
+            return;
+        }
+        var s,
+            r,
+            t;
+        r = false;
+        s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = src;
+        s.onload = s.onreadystatechange = function () {
+            if (!r && (!this.readyState || this.readyState == 'complete')) {
+                r = true;
+                callback();
+              Salla.event.createAndDispatch('WS::initiated');
+            }
+        };
+        t = document.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s, t);
+    }
+
+
+    
+    loadScript('https://cdn.assets.salla.network/prod/@salla.sa/websocket/2.1.10/websocket.min.js', function () {    
+        Salla.websocket
+            .init({"connectionToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNzQzNTk0NDMwIiwiZXhwIjoxNzY0ODY3NzIxfQ.pUaE8bg8Dp5SJqFLfrQqIJc9CwL95aprfRX9rZ_vV5M","eventsWhitelist":[],"connectionEndpoint":"wss:\/\/ws.salla.cloud\/connection\/websocket?cf_protocol_version=v2","channel":"92451676-events#1743594430","channelOptions":[],"debug":false})
+            .connect();
+    });
+    
+    
+</script>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    
+    var wsAlert = Promise.resolve();
+
+    function wsSwal(payload) {
+      return swal({
+          title            : payload.title || '',
+          type             : payload.type || 'info',
+          html             : payload.message,
+          confirmButtonText: payload?.action?.label || 'موافق',
+          //because it's hard to reproduce the same action, let's avoid closing the popup by mistake
+          allowOutsideClick: false,
+          allowEscapeKey   : false,
+        }
+      )
+    }
+
+    Salla.event.addEventListener('ws::action', function ({detail: payload}) {
+      wsAlert = wsAlert.then(() => wsSwal(payload))
+        .then(function (result) {
+          //swal is diffrent live and dev🤔
+          let isOK = typeof result == 'object' ? result.value : result;
+          if (!isOK) {
+            return;
+          }
+
+          if (payload.js) {
+            eval(payload.js);
+            return;
+          }
+
+          if (payload.action || payload.link) {
+            window.open(payload.action || payload.link, '_blank');
+          }
+        });
+    });
+
+    Salla.event.addEventListener('ws::info', function ({detail: payload}) {
+      wsAlert = wsAlert.then(() => wsSwal(payload));
+    });
+    Salla.event.addEventListener('ws::progress', function ({detail: payload}) {
+        orderGeneralToast(payload);
+    });
+
+    function orderGeneralToast(toastData) {
+        
+        toastData = {
+            'id': toastData.id,
+            'message': toastData.message,
+            'current': toastData.current,
+            'total': toastData.total,
+            'labelHref': null,
+            'icon': 'sicon-box',
+            'action': toastData.action
+        };
+
+        console.log(toastData)
+        showProgressToast(toastData)
+    }
+    Salla.event.addEventListener('ws::order_general_activity', function ({detail: payload}) {
+        orderGeneralToast(payload);
+    });
+
+    // this to get the defult reuslts
+    $(() => {
+        window.hasOwnProperty('operationConfig') && Object.keys(window.operationConfig).length > 0 && showProgressToast();
+    });
+
+</script>    <script type="28b087ebe96376e18ef78686-text/javascript">
+        $(document).ready(function () {
+            const handleSearchType = (type) => {
+                $('#searchbox').attr('placeholder', translations[type]);
+                if (type != 'orders') {
+                    $('.multi-order-search-tooltip').hide()
+                } else {
+                    $('.multi-order-search-tooltip').show()
+                }
+            }
+            const getSearchedType = () => {
+                const type = $('#search_input_type').val();
+                return type;
+            };
+            const ordersTooltipTrigger = document.querySelector('.multi-order-search-tooltip')
+            const isMobile = window.matchMedia('(max-width: 767px)').matches;
+            const offset = isMobile ? [0, 100] : [0, 15];
+            let maxCount = 15;
+            const tippyInstance = tippy(ordersTooltipTrigger, {
+                content: `<p id="multi-search-tooltip">للبحث عن أكثر من طلب يرجى الالتزام بالصيغة التالية :
+                [رقم الطلب , رقم الطلب , رقم الطلب....]
+                الحد الأقصى للبحث هو ${maxCount} طلب</p>`,
+                allowHTML: true,
+                theme: 'salla',
+                touchHold: true,
+                maxWidth: 300,
+                offset : offset,
+                arrow: !isMobile,
+                inlinePositioning: true,
+
+                // appendTo: ordersTooltipTrigger,
+            });
+            $('#searchbox').on('focus', function () {
+                const type = getSearchedType();
+                if (type != 'orders') return;
+                tippyInstance.show();
+            });
+            $('.multi-order-search-tooltip').on('click', function (e) {
+                if(!isMobile) return;
+                setTimeout(() => {
+                    tippyInstance.hide();
+                }, 5000);
+                tippyInstance.setProps({
+                    offset:[0,15],
+                    arrow: true,
+                    getReferenceClientRect: () => ({
+                        width: 0,
+                        height: 0,
+                        top: e.clientY + 15,
+                        bottom: e.clientY,
+                        left: e.clientX,
+                        right: e.clientX,
+                    }),
+                })
+                tippyInstance.show();
+            });
+            setTimeout(() => {
+                tippyInstance.hide();
+            }, 5000);
+
+            window.addEventListener('scroll', function () {
+                tippyInstance.hide();
+            })
+
+            let isValidSearch = false;
+            $('.navbar-form.navbar-left').on('submit', function (e) {
+                e.preventDefault();
+                const searchType = getSearchedType();
+                const searchKeyword = searchType == 'orders'
+                    ? $('#searchbox').val().replace(/,\s*$/, "").replace(/،\s*$/, "")
+                    : $('#searchbox').val();
+                $('#searchbox').val(searchKeyword)
+                if (searchType != 'orders') {
+                    isValidSearch = true
+                } else {
+                    validateProductSearch(searchKeyword);
+                }
+                if (isValidSearch) {
+                    $(this).unbind('submit').submit();
+                }
+            });
+
+            const validateProductSearch = (searchKeyword) => {
+                const delimiter = searchKeyword.includes(',') ? ',' : '،';
+                const searchKeywordArray = searchKeyword.split(delimiter);
+                const searchKeywordArrayLength = searchKeywordArray.length;
+                if (searchKeywordArrayLength === 1) {
+                    if(searchKeyword.length > 100){
+                        swal({
+                            text: `لقد تجاوزت الحد الاقصي لطول كلمه البحث`,
+                            type: "error",
+                            timer: 2000,
+                            showConfirmButton: true,
+                            confirmButtonText: "موافق",
+                        });
+                        isValidSearch = false
+                        return;
+                    }
+                    isValidSearch = true
+                    return;
+                }
+                // regex for comma separated list of order numbers or empty string
+                const regexPattern = /^(?:[\u0660-\u06690-9]+[،,]?)*$/;
+                if (!regexPattern.test(searchKeyword)) {
+                    swal({
+                        text: "صيغة الأرقام خاطئة , فضلاً البحث بالصيغة :[رقم الطلب , رقم الطلب , رقم الطلب....]",
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: true,
+                        confirmButtonText: "موافق",
+                    });
+                    isValidSearch = false
+                    return;
+                }
+                if (searchKeywordArrayLength > maxCount) {
+                    swal({
+                        text: `تجاوزت الحد الأقصر لعدد الطلبات , الحد الأقصى هو ${maxCount} طلبات`,
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: true,
+                        confirmButtonText: "موافق",
+                    });
+                    isValidSearch = false
+                    return;
+                }
+                isValidSearch = true
+            }
+            var translations = {
+                orders: "ابحث برقم الطلب ، اسم العميل ، رقم الشحنة",
+                products: "ابحث بإسم المنتج ، اسم التصنيف ، وصف المنتج أو الـSKU",
+                customers: "ابحث بإسم العميل ، رقم الجوال"
+            };
+            const type = getSearchedType();
+            handleSearchType(type);
+            $('#search_input_type').on('change', function () {
+                var type = $(this).val();
+                handleSearchType(type);
+            });
+        })
+    </script>
+    <script type="28b087ebe96376e18ef78686-text/javascript">
+        $(document).ready(function () {
+            const handleSearchType = (type) => {
+                $('#searchbox').attr('placeholder', translations[type]);
+                if (type != 'orders') {
+                    $('.multi-order-search-tooltip').hide()
+                } else {
+                    $('.multi-order-search-tooltip').show()
+                }
+            }
+            const getSearchedType = () => {
+                const type = $('#search_input_type').val();
+                return type;
+            };
+            const ordersTooltipTrigger = document.querySelector('.multi-order-search-tooltip')
+            const isMobile = window.matchMedia('(max-width: 767px)').matches;
+            const offset = isMobile ? [0, 100] : [0, 15];
+            let maxCount = 15;
+            const tippyInstance = tippy(ordersTooltipTrigger, {
+                content: `<p id="multi-search-tooltip">للبحث عن أكثر من طلب يرجى الالتزام بالصيغة التالية :
+                [رقم الطلب , رقم الطلب , رقم الطلب....]
+                الحد الأقصى للبحث هو ${maxCount} طلب</p>`,
+                allowHTML: true,
+                theme: 'salla',
+                touchHold: true,
+                maxWidth: 300,
+                offset : offset,
+                arrow: !isMobile,
+                inlinePositioning: true,
+
+                // appendTo: ordersTooltipTrigger,
+            });
+            $('#searchbox').on('focus', function () {
+                const type = getSearchedType();
+                if (type != 'orders') return;
+                tippyInstance.show();
+            });
+            $('.multi-order-search-tooltip').on('click', function (e) {
+                if(!isMobile) return;
+                setTimeout(() => {
+                    tippyInstance.hide();
+                }, 5000);
+                tippyInstance.setProps({
+                    offset:[0,15],
+                    arrow: true,
+                    getReferenceClientRect: () => ({
+                        width: 0,
+                        height: 0,
+                        top: e.clientY + 15,
+                        bottom: e.clientY,
+                        left: e.clientX,
+                        right: e.clientX,
+                    }),
+                })
+                tippyInstance.show();
+            });
+            setTimeout(() => {
+                tippyInstance.hide();
+            }, 5000);
+
+            window.addEventListener('scroll', function () {
+                tippyInstance.hide();
+            })
+
+            let isValidSearch = false;
+            $('.navbar-form.navbar-left').on('submit', function (e) {
+                e.preventDefault();
+                const searchType = getSearchedType();
+                const searchKeyword = searchType == 'orders'
+                    ? $('#searchbox').val().replace(/,\s*$/, "").replace(/،\s*$/, "")
+                    : $('#searchbox').val();
+                $('#searchbox').val(searchKeyword)
+                if (searchType != 'orders') {
+                    isValidSearch = true
+                } else {
+                    validateProductSearch(searchKeyword);
+                }
+                if (isValidSearch) {
+                    $(this).unbind('submit').submit();
+                }
+            });
+
+            const validateProductSearch = (searchKeyword) => {
+                const delimiter = searchKeyword.includes(',') ? ',' : '،';
+                const searchKeywordArray = searchKeyword.split(delimiter);
+                const searchKeywordArrayLength = searchKeywordArray.length;
+                if (searchKeywordArrayLength === 1) {
+                    if(searchKeyword.length > 100){
+                        swal({
+                            text: `لقد تجاوزت الحد الاقصي لطول كلمه البحث`,
+                            type: "error",
+                            timer: 2000,
+                            showConfirmButton: true,
+                            confirmButtonText: "موافق",
+                        });
+                        isValidSearch = false
+                        return;
+                    }
+                    isValidSearch = true
+                    return;
+                }
+                // regex for comma separated list of order numbers or empty string
+                const regexPattern = /^(?:[\u0660-\u06690-9]+[،,]?)*$/;
+                if (!regexPattern.test(searchKeyword)) {
+                    swal({
+                        text: "صيغة الأرقام خاطئة , فضلاً البحث بالصيغة :[رقم الطلب , رقم الطلب , رقم الطلب....]",
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: true,
+                        confirmButtonText: "موافق",
+                    });
+                    isValidSearch = false
+                    return;
+                }
+                if (searchKeywordArrayLength > maxCount) {
+                    swal({
+                        text: `تجاوزت الحد الأقصر لعدد الطلبات , الحد الأقصى هو ${maxCount} طلبات`,
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: true,
+                        confirmButtonText: "موافق",
+                    });
+                    isValidSearch = false
+                    return;
+                }
+                isValidSearch = true
+            }
+            var translations = {
+                orders: "ابحث برقم الطلب ، اسم العميل ، رقم الشحنة",
+                products: "ابحث بإسم المنتج ، اسم التصنيف ، وصف المنتج أو الـSKU",
+                customers: "ابحث بإسم العميل ، رقم الجوال"
+            };
+            const type = getSearchedType();
+            handleSearchType(type);
+            $('#search_input_type').on('change', function () {
+                var type = $(this).val();
+                handleSearchType(type);
+            });
+        })
+    </script>
+<script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/sharer.min.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+  <script type="28b087ebe96376e18ef78686-text/javascript">
+    $(function () {
+      $(document).on('click', '[data-sharer]', function () {
+          window.Sharer.init();
+      });
+
+      var clipboard = new Clipboard('.copy');
+      clipboard.on('success', function (e) {
+        $('.copy').parent().siblings('#copy_code_done').addClass('is-copied-in');
+        setTimeout(() => {
+          $('.copy').parent().siblings('#copy_code_done').removeClass('is-copied-in').addClass('is-copied-out');
+          setTimeout(() => {$('.copy').parent().siblings('#copy_code_done').removeClass('is-copied-out')}, 300);
+        }, 2000);
+        e.clearSelection();
+      });
+
+      $(document).on('click', '.more-links .btn, .btn-loyalty, .navbar-collapse .loyalty-points', function (e) {
+        e.preventDefault();
+        console.log('test')
+        $('#loyalty_points_modal').modal('hide');
+        showLoading(e);
+        const targetedDiv = $(this).data('target-div'),
+              targetedModal = $(this).data('target-modal'),
+              url = $(this).data('url');
+
+        $(`#${targetedDiv}`).html('');
+        $.ajax({
+          url: url,
+          type: 'GET',
+          cache: false,
+          success: function (resp) {
+            $(`#${targetedDiv}`).html(resp);
+            $(`#${targetedModal}`).modal('show');
+            hideLoading();
+          },
+          error: function (err) {
+            hideLoading();
+          },
+        });
+      });
+    })
+  </script>
+    <script src="https://cdn.assets.salla.network/prod/admin/cp/assets/js/sharer.min.js" type="28b087ebe96376e18ef78686-text/javascript"></script>
+    <script type="28b087ebe96376e18ef78686-text/javascript">
+        $('[data-sharer]').on('click', function () {
+            window.Sharer.init();
+        });
+        $('.tooltip-toggle--clickable').click(function (e) {
+          e.stopPropagation()
+        });
+        $('.tooltip-toggle--clickable span').click(function (e) {
+          e.stopPropagation()
+          $(this).siblings('.tooltip-content').toggle()
+        });
+        $(window).click(function () {
+          $('.tooltip-toggle--clickable .tooltip-content').hide();
+        });
+    </script>
+
+<lit-progressbar></lit-progressbar>
+<div id="modal_container"></div>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+    $.ajaxSetup({
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("s-legacy", window?.sallaLegacy);
+                    }
+    });
+</script>
+<script type="28b087ebe96376e18ef78686-text/javascript">
+
+        
+    
+    window.addEventListener('message', async function (event) {
+        if (event.data.event === 'open_salla_gpt') {
+            $('#sallaGptIframe').addClass('open').removeClass('close');
+        }
+
+        if (event.data.event === 'close_salla_gpt') {
+            $('#sallaGptIframe').removeClass("open").addClass('close');
+        }
+    });
+    
+    </script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="28b087ebe96376e18ef78686-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a84a1192899cc7d","version":"2025.9.1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"97ae863207e14d6a8f20a8aa94157871","b":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- الحمد لله -->

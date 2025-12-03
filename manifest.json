@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Salla Webhook Sender",
+  "version": "1.0.0",
+  "description": "إرسال webhook order.created تلقائياً في Salla",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://s.salla.sa/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://s.salla.sa/settings/component/webhooks*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
+
