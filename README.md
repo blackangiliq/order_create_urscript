@@ -1,15 +1,34 @@
-# Salla Webhook Sender - Chrome Extension
+# 🚀 Salla Webhook Sender - Chrome Extension
+
+[![GitHub](https://img.shields.io/badge/GitHub-order__create__urscript-blue?logo=github)](https://github.com/blackangiliq/order_create_urscript)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green?logo=googlechrome)](https://github.com/blackangiliq/order_create_urscript)
 
 ## 📋 الوصف
 إضافة Chrome لإرسال webhook تلقائياً لحدث `order.created` في منصة سلة.
 
+> **🔗 GitHub Repository:** https://github.com/blackangiliq/order_create_urscript
+
 ## 🚀 طريقة التثبيت
 
-### 1. تحميل الإضافة
+### طريقة 1: التحميل من GitHub
+```bash
+# نسخ المشروع
+git clone https://github.com/blackangiliq/order_create_urscript.git
+
+# أو تحميل ZIP من GitHub
+# ثم فك الضغط
+```
+
+### طريقة 2: تحميل مباشر
+1. اذهب إلى: https://github.com/blackangiliq/order_create_urscript
+2. اضغط `Code` → `Download ZIP`
+3. فك ضغط الملف
+
+### تثبيت الإضافة في Chrome
 1. افتح Chrome واذهب إلى: `chrome://extensions/`
 2. فعّل "وضع المطور" (Developer mode) في الزاوية العلوية
 3. اضغط على "Load unpacked" (تحميل بدون حزم)
-4. اختر مجلد `urscript_exteinton`
+4. اختر مجلد `order_create_urscript`
 
 ### 2. الاستخدام
 
